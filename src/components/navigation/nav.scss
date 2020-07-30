@@ -1,0 +1,23 @@
+.menu {
+  padding: 50px 15% 0 15% !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: white !important;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-weight: 200;
+
+  // text-shadow: -1px 1px 1px black !important;
+  .logo {
+    cursor: pointer;
+    display: inline-block !important;
+    text-align: left;
+  }
+  .item {
+    height: 50px;
+  }
+}
