@@ -10,7 +10,6 @@
   font-weight: normal;
   letter-spacing: 1px;
   font-weight: 200;
-
   // text-shadow: -1px 1px 1px black !important;
   .logo {
     cursor: pointer;
@@ -20,4 +19,11 @@
   .item {
     height: 50px;
   }
+}
+.ant-menu {
+  background-color: rgba(210, 105, 30, 0) !important;
+}
+.ant-menu-sh {
+  background-color: rgba($color: white, $alpha: 1) !important;
+  height: 200px !important;
 }

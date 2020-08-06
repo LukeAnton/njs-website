@@ -1,24 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu } from "antd";
 import "./nav.scss";
 import NJSLogo from "../../assets/NJSLogo";
 
-const Nav = ({ navItems, inPaintMode, mouseMoveAndDown }) => {
+const Nav = ({ navItems, inPaintMode, color }) => {
   const [hover, setHover] = useState(null);
 
   return (
     <>
       {hover ? (
-        <Menu style={{ zIndex: 999 }} className="menu" mode="horizontal">
+        <Menu
+          style={{ zIndex: 999 }}
+          className={color === "#403121" ? "menu ant-menu-sh" : "menu"}
+          mode="horizontal"
+        >
           {navItems.map((i) => {
             return (
               <Menu.Item
-                onClick={() => console.log("navclick")}
+                onClick={() => (window.location.pathname = i.path)}
                 className="item"
                 onMouseEnter={(e) => setHover(e.key)}
                 onMouseLeave={() => setHover(null)}
                 key={i.key}
                 style={{
+                  backgroundColor: "rgba(210, 105, 30, 0) !important",
                   height: i.item === "logo" && "130px",
                   position: i.item === "logo" && "absolute",
                   left: i.item === "logo" && "14%",
@@ -27,11 +32,16 @@ const Nav = ({ navItems, inPaintMode, mouseMoveAndDown }) => {
                     ? parseInt(hover) === i.key
                       ? "#C6B09A"
                       : "#403121"
-                    : "white",
+                    : color
+                    ? color
+                    : "#403121",
                 }}
               >
                 {i.item === "logo" ? (
-                  <NJSLogo onMouseEnter={(e) => setHover(e.key)} />
+                  <NJSLogo
+                    color={color}
+                    onMouseEnter={(e) => setHover(e.key)}
+                  />
                 ) : (
                   i.item
                 )}
@@ -42,7 +52,7 @@ const Nav = ({ navItems, inPaintMode, mouseMoveAndDown }) => {
       ) : (
         <Menu
           style={{ zIndex: inPaintMode ? null : 999 }}
-          className="menu"
+          className={color === "#403121" ? "menu ant-menu-sh" : "menu"}
           mode="horizontal"
         >
           {navItems.map((i) => {
@@ -62,11 +72,16 @@ const Nav = ({ navItems, inPaintMode, mouseMoveAndDown }) => {
                     ? parseInt(hover) === i.key
                       ? "#C6B09A"
                       : "#403121"
-                    : "white",
+                    : color
+                    ? color
+                    : "#403121",
                 }}
               >
                 {i.item === "logo" ? (
-                  <NJSLogo onMouseEnter={(e) => setHover(e.key)} />
+                  <NJSLogo
+                    color={color}
+                    onMouseEnter={(e) => setHover(e.key)}
+                  />
                 ) : (
                   i.item
                 )}

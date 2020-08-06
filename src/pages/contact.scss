@@ -1,0 +1,43 @@
+.contact-container {
+  padding: 240px 15% 90px 15%;
+}
+.contact-mini-heading {
+  font-family: BlinkMacSystemFont !important;
+  color: #c6b09a;
+  text-transform: uppercase;
+  margin-bottom: 40px !important;
+}
+.contact-page-heading {
+  font-family: BlinkMacSystemFont !important;
+  color: #403121;
+  text-align: left;
+  letter-spacing: 3px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.contact-page-about {
+  font-family: BlinkMacSystemFont !important;
+  font-size: 15px;
+  color: #403121;
+  margin: 0;
+  font-weight: 200;
+  line-height: 30px;
+}
+.contact-page-button {
+  font-family: BlinkMacSystemFont !important;
+  display: inline-block;
+  text-align: center;
+  padding-top: 13px;
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+  color: #c6b09a;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #c6b09a;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #c6b09a;
+    color: white;
+    transition: 0.3s;
+  }
+}

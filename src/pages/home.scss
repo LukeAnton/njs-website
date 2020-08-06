@@ -22,17 +22,19 @@
     top: 43%;
   }
   &-heading {
+    font-family: BlinkMacSystemFont !important;
     color: white;
     text-align: left;
     letter-spacing: 3px;
-
     font-weight: 200;
   }
   &-about {
+    font-family: BlinkMacSystemFont !important;
     font-size: 15px;
     color: white;
     margin: 0;
     font-weight: 200;
+    line-height: 30px;
   }
 }
 .dark-overlay {
@@ -45,18 +47,20 @@
   background-color: rgba(black, 0.2);
 }
 .secondary {
+  font-family: BlinkMacSystemFont !important;
   /* height: 93.9vh; */
   height: auto;
   width: 100%;
-  padding: 50px 15%;
-  position: absolute;
+  padding: 90px 15%;
   // &-mini-heading {
   // }
   &-mini-heading {
+    font-family: BlinkMacSystemFont !important;
     color: #c6b09a;
     text-transform: uppercase;
   }
   &-heading {
+    font-family: BlinkMacSystemFont !important;
     color: #403121;
     text-align: left;
     letter-spacing: 3px;
@@ -64,9 +68,11 @@
     text-transform: uppercase;
   }
   &-about {
+    font-family: BlinkMacSystemFont !important;
     font-size: 15px;
     color: #403121;
     margin: 0;
     font-weight: 200;
+    line-height: 30px;
   }
 }

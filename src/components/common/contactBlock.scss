@@ -1,0 +1,51 @@
+.block-container {
+  padding: 10% 15%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  //   background-color: #403121;
+  background-color: #c6b09a;
+  .contact-heading {
+    font-family: BlinkMacSystemFont !important;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 200;
+    margin: 0;
+    padding: 40px 0;
+    color: white;
+  }
+  .contact-button {
+    font-family: BlinkMacSystemFont !important;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding-top: 13px;
+    width: 120px;
+    height: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    text-transform: uppercase;
+    &:hover {
+      background-color: white;
+      color: #c6b09a;
+      transition: 0.3s;
+    }
+  }
+  .contact-socials {
+    font-family: BlinkMacSystemFont !important;
+    padding: 40px 0;
+    color: white;
+
+    .social-icons {
+      margin: 0 20px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+    }
+  }
+}
