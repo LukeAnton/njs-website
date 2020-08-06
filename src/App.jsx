@@ -26,7 +26,7 @@ const App = () => {
       )}
       {window.location.pathname === "/contact" && <Nav navItems={navItems} />}
       <div className="App">
-        <Route exact path="/" component={Home} />
+        <Route exact path="/njs-website/" component={Home} />
         <Route exact path="/services" component={Services} />
         <Route exact path="/projects-gallery" component={ProjectsGallery} />
         <Route exact path="/contact" component={Contact} />
