@@ -2,6 +2,7 @@
   "name": "njs-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lukeanton.github.io/njs-website/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -29,7 +30,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://lukeanton.github.io/njs-website/",
   "browserslist": {
     "production": [
       ">0.2%",
