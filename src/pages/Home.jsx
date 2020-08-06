@@ -7,7 +7,6 @@ import "./home.scss";
 
 const Home = () => {
   const [navColor, setNavColor] = useState("white");
-  const [clearCanvas, setClearCanvas] = useState(null);
   const [inPaintMode, setInPainMode] = useState(false);
   const [activeCanvas, setActiveCanvas] = useState(false);
   const [mouseMoveAndDown, setMouseMoveAndDown] = useState(false);
@@ -51,10 +50,10 @@ const Home = () => {
           style={{
             zIndex: inPaintMode && mouseMoveAndDown ? 0 : 17,
           }}
-          class="container-inner"
+          className="container-inner"
         >
           <h1 className="container-heading">CARPENTRY & PLASTERING</h1>
-          <p class="container-about">
+          <p className="container-about">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
             sunt rerum neque est atque quidem temporibus sit, voluptatem
             architecto obcaecati iste nesciunt molestiae fugiat laudantium
@@ -74,7 +73,6 @@ const Home = () => {
           <>
             <CanvasDraw
               style={{ overflowY: "hidden !important" }}
-              ref={(canvasDraw) => setClearCanvas(canvasDraw)}
               hideGrid
               lazyRadius={15}
               brushRadius={20}
