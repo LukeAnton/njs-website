@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+
+$color-background: #f5f5f5;
+$color-main: #754545;
+$color-active: #fff;
+$color-link: #fff;
+
+$button-height: 27px;
+$button-width: 35px;
+
+body {
+  background: $color-background;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: $color-main;
+  text-decoration: none;
+  font-size: 50px;
+  overflow: hidden;
+  top: 5px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: $color-main;
+    height: 2px;
+    width: 0%;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    transition: 0.35s ease;
+  }
+  &:hover:after,
+  &:focus:after,
+  &:active:after {
+    width: 100%;
+  }
+}
+
+.button_container {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  height: $button-height;
+  width: $button-width;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.25s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &.active {
+    z-index: 10001 !important;
+    .top {
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: $color-active;
+    }
+    .middle {
+      opacity: 0;
+      background: $color-active;
+    }
+
+    .bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: $color-active;
+    }
+  }
+
+  span {
+    background: $color-main;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.35s ease;
+    cursor: pointer;
+
+    &:nth-of-type(2) {
+      top: 11px;
+    }
+
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background: $color-main;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+
+  &.open {
+    opacity: 0.9;
+    visibility: visible;
+    height: 100%;
+    z-index: 9999 !important;
+    li {
+      animation: fadeInTop 0.5s ease forwards;
+      animation-delay: 0.65s;
+
+      &:nth-of-type(2) {
+        animation-delay: 0.55s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 0.35s;
+      }
+    }
+  }
+  nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-family: "Vollkorn", serif;
+    font-weight: 400;
+    text-align: left;
+  }
+  ul {
+    font-family: "Anton", sans-serif;
+    list-style: none;
+    padding: 0;
+
+    display: inline-block;
+    position: relative;
+    height: 100%;
+
+    li {
+      display: block;
+      height: 25%;
+      height: calc(100% / 4);
+      min-height: 50px;
+      position: relative;
+      opacity: 0;
+
+      a {
+        display: block;
+        position: relative;
+        color: $color-link;
+        text-decoration: none;
+        overflow: hidden;
+
+        &:hover:after,
+        &:focus:after,
+        &:active:after {
+          width: 100%;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: $color-link;
+          transition: 0.35s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+  }
+}

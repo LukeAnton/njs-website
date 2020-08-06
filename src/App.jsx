@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import Nav from "./components/navigation/Nav";
+import MiniNav from "./components/navigation/MiniNav";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import ProjectsGallery from "./pages/ProjectsGallery";
@@ -18,6 +19,7 @@ const navItems = [
 const App = () => {
   return (
     <Router>
+      <MiniNav />
       {window.location.pathname === "/services" && <Nav navItems={navItems} />}
       {window.location.pathname === "/projects-gallery" && (
         <Nav navItems={navItems} />
