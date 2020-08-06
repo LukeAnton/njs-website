@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/njs-website/static/css/main.3d48a2c5.chunk.css",
+    "main.js": "/njs-website/static/js/main.890fdf4e.chunk.js",
+    "main.js.map": "/njs-website/static/js/main.890fdf4e.chunk.js.map",
+    "runtime-main.js": "/njs-website/static/js/runtime-main.5c74be2d.js",
+    "runtime-main.js.map": "/njs-website/static/js/runtime-main.5c74be2d.js.map",
+    "static/css/2.37db3418.chunk.css": "/njs-website/static/css/2.37db3418.chunk.css",
+    "static/js/2.ecf0ec66.chunk.js": "/njs-website/static/js/2.ecf0ec66.chunk.js",
+    "static/js/2.ecf0ec66.chunk.js.map": "/njs-website/static/js/2.ecf0ec66.chunk.js.map",
+    "index.html": "/njs-website/index.html",
+    "precache-manifest.d297716c372313b4870a544ef8de5f1f.js": "/njs-website/precache-manifest.d297716c372313b4870a544ef8de5f1f.js",
+    "service-worker.js": "/njs-website/service-worker.js",
+    "static/css/2.37db3418.chunk.css.map": "/njs-website/static/css/2.37db3418.chunk.css.map",
+    "static/css/main.3d48a2c5.chunk.css.map": "/njs-website/static/css/main.3d48a2c5.chunk.css.map",
+    "static/js/2.ecf0ec66.chunk.js.LICENSE.txt": "/njs-website/static/js/2.ecf0ec66.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/njs-website/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/home.scss": "/njs-website/static/media/landing-page.3428cb92.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5c74be2d.js",
+    "static/css/2.37db3418.chunk.css",
+    "static/js/2.ecf0ec66.chunk.js",
+    "static/css/main.3d48a2c5.chunk.css",
+    "static/js/main.890fdf4e.chunk.js"
+  ]
+}
