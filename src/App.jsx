@@ -19,25 +19,26 @@ const navItems = [
 const App = () => {
   return (
     <Router>
-      <MiniNav />
-      {window.location.pathname === "/njs-website/services" && (
+      {window.location.pathname === "/services" && (
+        <MiniNav navItems={navItems} />
+      )}
+      {window.location.pathname === "/projects-gallery" && (
+        <MiniNav navItems={navItems} />
+      )}
+      {window.location.pathname === "/contact" && (
+        <MiniNav navItems={navItems} />
+      )}
+
+      {window.location.pathname === "/services" && <Nav navItems={navItems} />}
+      {window.location.pathname === "/projects-gallery" && (
         <Nav navItems={navItems} />
       )}
-      {window.location.pathname === "/njs-website/projects-gallery" && (
-        <Nav navItems={navItems} />
-      )}
-      {window.location.pathname === "/njs-website/contact" && (
-        <Nav navItems={navItems} />
-      )}
+      {window.location.pathname === "/contact" && <Nav navItems={navItems} />}
       <div className="App">
-        <Route exact path="/njs-website/" component={Home} />
-        <Route exact path="/njs-website/services" component={Services} />
-        <Route
-          exact
-          path="/njs-website/projects-gallery"
-          component={ProjectsGallery}
-        />
-        <Route exact path="/njs-website/contact" component={Contact} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/services" component={Services} />
+        <Route exact path="/projects-gallery" component={ProjectsGallery} />
+        <Route exact path="/contact" component={Contact} />
       </div>
     </Router>
   );

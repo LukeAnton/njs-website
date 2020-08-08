@@ -58,7 +58,6 @@ const Nav = ({ navItems, inPaintMode, color }) => {
           {navItems.map((i) => {
             return (
               <Menu.Item
-                onClick={() => console.log("navclick")}
                 className="item"
                 onMouseEnter={(e) => setHover(e.key)}
                 onMouseLeave={() => setHover(null)}

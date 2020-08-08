@@ -1,24 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 
 $color-background: #f5f5f5;
-$color-main: #754545;
+$color-main: #fff;
+$color-sec: #c6b09a;
 $color-active: #fff;
 $color-link: #fff;
 
 $button-height: 27px;
 $button-width: 35px;
 
-body {
-  background: $color-background;
-}
-
-a {
+.mini-item {
+  font-family: BlinkMacSystemFont !important;
+  font-weight: 200;
   display: inline-block;
   position: relative;
   text-align: center;
   color: $color-main;
   text-decoration: none;
-  font-size: 50px;
+  font-size: 28px;
   overflow: hidden;
   top: 5px;
 
@@ -39,23 +38,30 @@ a {
     width: 100%;
   }
 }
+@media only screen and (min-width: 820px) {
+  .button_container {
+    display: none !important;
+  }
+  .overlay {
+    display: none !important;
+  }
+}
 
 .button_container {
   position: fixed;
-  top: 2%;
-  left: 2%;
+  top: 70px;
+  left: 15% !important;
   height: $button-height;
   width: $button-width;
   cursor: pointer;
   z-index: 100;
   transition: opacity 0.25s ease;
-
+  z-index: 10001 !important;
   &:hover {
     opacity: 0.7;
   }
 
   &.active {
-    z-index: 10001 !important;
     .top {
       transform: translateY(11px) translateX(0) rotate(45deg);
       background: $color-active;
@@ -74,7 +80,7 @@ a {
   span {
     background: $color-main;
     border: none;
-    height: 5px;
+    height: 2px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -91,10 +97,19 @@ a {
     }
   }
 }
-
+// @media only screen and (max-width: 767px) {
+//   .button_container {
+//     left: 17%;
+//   }
+// }
+// @media only screen and (max-width: 580px) {
+//   .button_container {
+//     left: 18%;
+//   }
+// }
 .overlay {
   position: fixed;
-  background: $color-main;
+  background: $color-sec;
   top: 0;
   left: 0;
   width: 100%;
@@ -127,15 +142,15 @@ a {
   nav {
     position: relative;
     height: 70%;
-    top: 50%;
-    left: 10%;
+    top: 60%;
+    // left: 10%;
     transform: translateY(-50%);
-    font-family: "Vollkorn", serif;
+    font-family: BlinkMacSystemFont !important;
+
     font-weight: 400;
-    text-align: left;
+    text-align: center;
   }
   ul {
-    font-family: "Anton", sans-serif;
     list-style: none;
     padding: 0;
 
@@ -146,7 +161,7 @@ a {
     li {
       display: block;
       height: 25%;
-      height: calc(100% / 4);
+      height: calc(100% / 5);
       min-height: 50px;
       position: relative;
       opacity: 0;
@@ -171,7 +186,7 @@ a {
           left: 50%;
           width: 0%;
           transform: translateX(-50%);
-          height: 3px;
+          height: 2px;
           background: $color-link;
           transition: 0.35s;
         }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CanvasDraw from "react-canvas-draw";
 import Nav from "../components/navigation/Nav";
+import MiniNav from "../components/navigation/MiniNav";
 import ContactBlock from "../components/common/ContactBlock";
 
 import "./home.scss";
@@ -61,12 +62,15 @@ const Home = () => {
           </p>
         </div>
         {window.location.pathname === "/" && (
-          <Nav
-            navItems={navItems}
-            inPaintMode={inPaintMode}
-            mouseMoveAndDown={mouseMoveAndDown}
-            color={navColor}
-          />
+          <>
+            <Nav
+              navItems={navItems}
+              inPaintMode={inPaintMode}
+              mouseMoveAndDown={mouseMoveAndDown}
+              color={navColor}
+            />
+            <MiniNav navItems={navItems} color={navColor} />
+          </>
         )}
 
         {activeCanvas ? (

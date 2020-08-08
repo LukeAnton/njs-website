@@ -28,7 +28,7 @@ const ProjectsGallery = () => {
         <Grid columns={2} stackable>
           <Grid.Row className="grid-row">
             {imgs.map((i) => (
-              <Grid.Column key={i}>
+              <Grid.Column className="grid-column" key={i}>
                 <img className="gallery-img" src={i} alt="gallery-shot" />
               </Grid.Column>
             ))}
